@@ -1,9 +1,25 @@
-# 035 - Desenvolva um programa que leia o comprimento de três retas e diga o usuário se eles podem ou não formar um triângulo.
-reta01 = float(input('Digite o valor da primeira reta: '))
-reta02 = float(input('Digite o valor da segunda reta: '))
-reta03 = float(input('Digite o valor da terceira reta: '))
+# 037 - Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão:
+# 1 para binário
+# 2 para octal
+# 3 para hexadecimal
+import os, random
 
-if (reta01 < (reta02 + reta03)) and (reta02 < (reta01 + reta03)) and (reta03 < (reta02 + reta01)):
-    print('\033[1;32mPerfeito!\033[m O triângulo pode ser formado com sucesso.')
+os.system('clear')
+
+numThis = int(input('Digite o número escolhido: \n'))
+numEscolha = int(input('Escolha a base de conversão\n' \
+'1 - Binário\n' \
+'2 - Octal\n' \
+'3 - Hexadecimal\n'))
+
+if numEscolha == 1:
+    binario = bin(numThis)[2:]
+    print(f'Binário de \033[4;34m{numThis}\033[m é \033[4;33m{binario}\033[m')
+elif numEscolha == 2:
+    octal = oct(numThis)[2:]
+    print(f'Octal de \033[4;34m{numThis}\033[m é \033[4;33m{octal}\033[m')
+elif numEscolha == 3:
+    hexadecimal = hex(numThis)[2:]
+    print(f'Hexadecimal de \033[4;34m{numThis}\033[m é \033[4;33m{hexadecimal}\033[m')
 else:
-    print('\033[1;31mAh não...\033[m o valor das retas não podem formar um triângulo!')
+    print('\033[31mOpção inválida!\033[m')
