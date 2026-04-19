@@ -1,25 +1,21 @@
-# 037 - Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão:
-# 1 para binário
-# 2 para octal
-# 3 para hexadecimal
+# 045 - Crie um programa que faça o computador jogar JOKENPÔ com você.
 import os, random
 
 os.system('clear')
 
-numThis = int(input('Digite o número escolhido: \n'))
-numEscolha = int(input('Escolha a base de conversão\n' \
-'1 - Binário\n' \
-'2 - Octal\n' \
-'3 - Hexadecimal\n'))
+compEscolhe = random.randint(1,3)
 
-if numEscolha == 1:
-    binario = bin(numThis)[2:]
-    print(f'Binário de \033[4;34m{numThis}\033[m é \033[4;33m{binario}\033[m')
-elif numEscolha == 2:
-    octal = oct(numThis)[2:]
-    print(f'Octal de \033[4;34m{numThis}\033[m é \033[4;33m{octal}\033[m')
-elif numEscolha == 3:
-    hexadecimal = hex(numThis)[2:]
-    print(f'Hexadecimal de \033[4;34m{numThis}\033[m é \033[4;33m{hexadecimal}\033[m')
+userEscolhe = int(input('-'*20 + '\n\033[1;33m  1 - Pedra\033[m\n' \
+'\033[1;34m  2 - Papel\033[m\n' \
+'\033[1;35m  3 - Tesoura\033[m\n' +\
+'-'*20+'\n'))
+
+print(compEscolhe)
+if userEscolhe == compEscolhe:
+    print('\033[33mEmpate!\033[m')
+elif (userEscolhe == 1 and compEscolhe == 3) or (userEscolhe == 2 and compEscolhe == 1) or (userEscolhe == 3 and compEscolhe == 2):
+    print('\033[32mVitória!\033[m')
+elif (userEscolhe == 3 and compEscolhe == 1) or (userEscolhe == 1 and compEscolhe == 2) or (userEscolhe == 2 and compEscolhe == 3):
+    print('\033[31mDerrota!\033[m')
 else:
-    print('\033[31mOpção inválida!\033[m')
+    print('Opção inválida!')
