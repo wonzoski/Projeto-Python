@@ -39,6 +39,10 @@ while True:
     if Numero_Usuario == Numero_Computador:
         print(f'{cores.negativo}{cores.verde}Acertou!{cores.fimCor}\n')
         break
-    print(f'{cores.negativo}{cores.vermelho}Incorreto. Tente novamente.{cores.fimCor}\n')
-    continue
+    elif Numero_Usuario > Numero_Computador:
+        print(f'{cores.negativo}{cores.vermelho}Incorreto. Número é menor!{cores.fimCor}\n')
+        continue
+    else:
+        print(f'{cores.negativo}{cores.vermelho}Incorreto. Número é maior!.{cores.fimCor}\n')
+        continue
 print(f'Foi um total de {cores.negrito}{cores.amarelo}{contador}{cores.fimCor} palpites até acertar.')
