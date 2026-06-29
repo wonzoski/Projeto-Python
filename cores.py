@@ -35,6 +35,7 @@
 
 import os
 os.system('clear')
+os.system('cls')
 
 vermelho = str('\033[31m')
 verde = str('\033[32m')

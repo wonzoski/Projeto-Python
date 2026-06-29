@@ -5,12 +5,13 @@
 
 import cores
 
-totalProd = contMil = barato = 0
+totalProd = contMil = barato = cont = 0
 corBarato = corPreco = cores.vermelho
 
 while True:
     produto = str(input('Digite o nome do produto: ')).strip().upper()
     preço = float(input('Digite o valor do produto: R$'))
+
 
     pergunta = str(input('Deseja prosseguir? S/N')).strip().upper()[0] == 'N'
 
@@ -23,7 +24,9 @@ while True:
         corPreco = cores.verde
 
     # C) Qual é o nome do produto mais barato.
-    if preço > barato:
+    cont += 1
+    if cont == 1 or preço < barato:
+        barato = preço
         nomeBarato = produto
         corBarato = cores.verde
 

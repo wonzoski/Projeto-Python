@@ -4,7 +4,7 @@ import cores
 
 while True:
     # pergunte ao usuário qual será o valor a ser sacado
-    valorSaque = int(input('Digite o valor do saque: '))
+    valorSaque = int(input('Digite o valor do saque: R$'))
 
     NCinquenta = valorSaque // 50
 
@@ -17,5 +17,3 @@ while True:
     break
 
 print(f'→ Notas de R$50: {NCinquenta}\n→ Notas de R$20: {NVinte}\n→ Notas de R$10: {NDez}\n→ Notas de R$1: {NUm}')
-
-

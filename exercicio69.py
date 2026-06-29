@@ -10,7 +10,11 @@ corIdade = corSexoM = corSexoF = cores.vermelho
 
 while True:
     idade = int(input('Digite a idade: '))
-    sexo = input('Digite o sexo: M/F ').strip().upper()[0]
+
+    sexo = ' '
+
+    while sexo not in 'MF':
+        sexo = str(input('Digite o sexo: M/F ')).strip().upper()[0]
     
     pergunta = input('Deseja continuar? S/N ').strip().upper()[0] == 'N'
 
