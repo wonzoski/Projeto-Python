@@ -7,7 +7,7 @@ while True:
         break
     for x in range(1,11):
         if x % 2 == 0:
-            corLinha = cores.backAmarelo
+            corLinha = cores.verde
         else:
             corLinha = cores.backAzul
         print(f'{corLinha}{numero} X {x:<2} = {numero*x}{cores.fimCor}')
