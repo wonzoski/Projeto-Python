@@ -8,11 +8,11 @@ maior = menor = numLista[0]
 
 print(numLista)
 
-for numero in numLista:
-    if numero > maior:
-        maior = numero
+#for numero in numLista:
+#    if numero > maior:
+#        maior = numero
+#
+#    if numero < menor:
+#        menor = numero
 
-    if numero < menor:
-        menor = numero
-
-print(f'{cores.verde}↑{cores.fimCor}{maior} {cores.vermelho}↓{cores.fimCor}{menor}')
+print(f'{cores.verde}↑{cores.fimCor}{max(numLista)} {cores.vermelho}↓{cores.fimCor}{min(numLista)}')
