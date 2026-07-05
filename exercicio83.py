@@ -4,17 +4,14 @@ import cores
 
 lista_expressão = list(str(input('Digite a expressão: ')))
 
-# Detectar o parenteses
-#print(lista_expressão.count('('), lista_expressão.count(')'))
+# (())()()
 
-# ())()(
-
-for x in range(len(lista_expressão)):
-    if lista_expressão[x] == '(':
-        for y in range(len(lista_expressão) - 1, -1, -1):
-            if lista_expressão[y] == '(':
-                print('A expressão não está correta.')
-                break
-            elif lista_expressão[y] == ')':
-                lista_expressão.pop(x)
-                lista_expressão.pop(y)
+while '(' in lista_expressão and ')' in lista_expressão and lista_expressão.index(')') > lista_expressão.index('('):
+    lista_expressão.pop(lista_expressão.index('('))
+    lista_expressão.pop(lista_expressão.index(')'))
+    print(lista_expressão)
+    
+if '(' in lista_expressão or ')' in lista_expressão:
+    print('Expressão inválida!')
+else:
+    print('Expressão válida.')

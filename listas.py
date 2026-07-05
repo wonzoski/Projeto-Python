@@ -70,9 +70,34 @@ b = a
 b[2] = 8
 print(f'Valor da lista A é {a}\nValor da lista B é {b}\n')
 
+#-+---------+
+# | AULA 18 |
+#-+---------+
+
 # Realizando uma cópia entre as listas
 print(f'{cores.verde}# Realizando uma cópia entre as listas.{cores.fimCor}')
 c = [3, 5, 6, 1]
 d = c[:]
 d[3] = 44
 print(f'Os valores da list C são: {c}\nOs valores da lista D são {d}\n')
+
+# Inserindo uma lista dentro de outra lista (Listas compostas)
+dados = ["Pedro", 25]
+pessoas = []
+
+pessoas.append(dados[:]) # Importante que seja (dados[:]) e não somente (dados) pois apenas este, crie um elo entre as lista igual se fosse pessoas = dados
+
+# 3 listas dentro de uma
+pessoas = [["Pedro", 25],["Maria", 19],["João", 32]]
+
+#-+------------------+------------------+-----------------+
+# | +---------+----+ | +---------+----+ | +--------+----+ |
+# | | 'Pedro' | 25 | | | 'Maria' | 19 | | | 'João' | 32 | |
+# | +---------+----+ | +---------+----+ | +--------+----+ |
+# |      0      1    |     0       1    |      0      1   |
+#-+------------------+------------------+-----------------+
+#         0                   1                 2
+
+print(pessoas[0][0])
+print(pessoas[1][1])
+print(pessoas[2][0])

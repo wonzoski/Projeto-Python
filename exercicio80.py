@@ -13,4 +13,3 @@ for x in range(5):
             lista_numeros.insert(y, lista_numeros[x])
             lista_numeros.pop()
 print(lista_numeros)
-
